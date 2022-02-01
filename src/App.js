@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import Cloud from './assets/cloud_icon.svg';
-import Mist from './assets/mist_icon.svg';
-import Clear from './assets/clear_icon.svg';
-import Rain from './assets/rain_icon.svg';
+import Cloud from './assets/cloudy.png';
+import Mist from './assets/mist.png';
+import Clear from './assets/sunny.png';
+import Rain from './assets/rain.png';
+import Snow from './assets/snow.png';
+import Logo from './assets/logo.svg';
 
 const api = {
   key: "f21ad80c65e7b28c836b69dde16a350b",
@@ -17,6 +19,7 @@ function App() {
   const [icon, setIcon] = useState('/src/assets/clear.png');
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
+  const [mainSearch, setSearch] = useState('');
 
 
   const search = evt => {
@@ -57,7 +60,7 @@ function App() {
   try {
 
   let nowWeather =  w.weather[0].main ;
-  let types = ["Clear" , "Clouds" , "Mist", "Rain", "Fog"]
+  let types = ["Clear" , "Clouds" , "Mist", "Rain", "Fog", "Snow"]
 
 
   if(w.main != "undefined") {
@@ -82,6 +85,9 @@ function App() {
         setBg('app rain')
         setIcon(Rain)
 
+      }else if (nowWeather == types[5]){
+        setBg('app snow')
+        setIcon(Snow)
       }
 
 
@@ -98,16 +104,19 @@ function App() {
   return (
     <div className={updateBg}>
       <main>
+        <div className='logo'><img src={Logo} width="160px" /></div>
         <div className="search-box">
           <input
             type="text"
             className="search-bar"
-            placeholder="Search..."
+            placeholder="Search for a city"
             onChange={e => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
           />
         </div>
+
+
         {(typeof weather.main != "undefined") ? (
         <div className='full-weather'>
           <div className="location-box">
