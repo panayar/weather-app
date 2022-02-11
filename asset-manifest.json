@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/weather-app/static/css/main.b3866afa.css",
-    "main.js": "/weather-app/static/js/main.ea1c4bfb.js",
+    "main.css": "/weather-app/static/css/main.37a50d08.css",
+    "main.js": "/weather-app/static/js/main.8ddfb643.js",
     "static/js/787.d9312eb8.chunk.js": "/weather-app/static/js/787.d9312eb8.chunk.js",
-    "static/media/wether.jpg": "/weather-app/static/media/wether.fe5e086f7085915cd98d.jpg",
-    "static/media/rain_icon.svg": "/weather-app/static/media/rain_icon.95c2b9c776b0c8002054c2263226ebb5.svg",
-    "static/media/clear_icon.svg": "/weather-app/static/media/clear_icon.7c11db25f80739745cb37e3481c37f1a.svg",
-    "static/media/mist_icon.svg": "/weather-app/static/media/mist_icon.353e2cda3c0ded7f02f7f67875c779c7.svg",
-    "static/media/cloud_icon.svg": "/weather-app/static/media/cloud_icon.cb0efa766e25094dfa96b0c09dd5a418.svg",
+    "static/media/bg.jpg": "/weather-app/static/media/bg.e20328f902396da3537e.jpg",
+    "static/media/snow.png": "/weather-app/static/media/snow.9957456da0445490c376.png",
+    "static/media/rain.png": "/weather-app/static/media/rain.513cb7a576bcdf46ceed.png",
+    "static/media/mist.png": "/weather-app/static/media/mist.cffbd3961a9c22f3bfcc.png",
+    "static/media/thunderstorm.png": "/weather-app/static/media/thunderstorm.6a2cceaf353078393e27.png",
+    "static/media/logo.svg": "/weather-app/static/media/logo.8e78ff75b2ce78a636a71e6a05717065.svg",
+    "static/media/sunny.png": "/weather-app/static/media/sunny.ad0350edb1ecc7eb7203.png",
+    "static/media/cloudy.png": "/weather-app/static/media/cloudy.80594e9b1f9aa5b03c81.png",
     "index.html": "/weather-app/index.html",
-    "main.b3866afa.css.map": "/weather-app/static/css/main.b3866afa.css.map",
-    "main.ea1c4bfb.js.map": "/weather-app/static/js/main.ea1c4bfb.js.map",
+    "main.37a50d08.css.map": "/weather-app/static/css/main.37a50d08.css.map",
+    "main.8ddfb643.js.map": "/weather-app/static/js/main.8ddfb643.js.map",
     "787.d9312eb8.chunk.js.map": "/weather-app/static/js/787.d9312eb8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3866afa.css",
-    "static/js/main.ea1c4bfb.js"
+    "static/css/main.37a50d08.css",
+    "static/js/main.8ddfb643.js"
   ]
 }
