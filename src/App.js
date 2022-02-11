@@ -5,6 +5,7 @@ import Clear from './assets/sunny.png';
 import Rain from './assets/rain.png';
 import Snow from './assets/snow.png';
 import Logo from './assets/logo.svg';
+import Thunder from './assets/thunderstorm.png';
 
 const api = {
   key: "f21ad80c65e7b28c836b69dde16a350b",
@@ -19,8 +20,7 @@ function App() {
   const [icon, setIcon] = useState('/src/assets/clear.png');
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
-  const [mainSearch, setSearch] = useState('');
-
+  
 
   const search = evt => {
     try {
@@ -39,7 +39,7 @@ function App() {
     }catch(Exception){
       console.log("City no found")
     }
-    
+
   }
 
   const dateBuilder = (d) => {
@@ -60,34 +60,38 @@ function App() {
   try {
 
   let nowWeather =  w.weather[0].main ;
-  let types = ["Clear" , "Clouds" , "Mist", "Rain", "Fog", "Snow"]
+  let types = ["Clear" , "Clouds" , "Mist", "Rain", "Fog", "Snow", "Thunderstorm"]
 
 
-  if(w.main != "undefined") {
+  if(w.main !== "undefined") {
 
-      if(nowWeather == types[0]) {
+      if(nowWeather === types[0]) {
 
       setBg('app clear')
       setIcon(Clear)
 
-      } else if (nowWeather == types[1]) {
+      } else if (nowWeather === types[1]) {
 
         setBg('app cloud')
         setIcon(Cloud)
 
-      } else if (nowWeather == types [2] || nowWeather == types[4]){
+      } else if (nowWeather === types[2] || nowWeather === types[4]){
 
         setBg('app mist')
         setIcon(Mist)
 
-      } else if (nowWeather == types [3]){
+      } else if (nowWeather === types[3]){
 
         setBg('app rain')
         setIcon(Rain)
 
-      }else if (nowWeather == types[5]){
+      }else if (nowWeather === types[5]){
         setBg('app snow')
         setIcon(Snow)
+
+      }else if (nowWeather === types[6]){
+        setBg('app thunder')
+        setIcon(Thunder)
       }
 
 
@@ -104,7 +108,7 @@ function App() {
   return (
     <div className={updateBg}>
       <main>
-        <div className='logo'><img src={Logo} width="160px" /></div>
+        <div className='logo'><img src={Logo} width="160px" alt='logo' /></div>
         <div className="search-box">
           <input
             type="text"
@@ -125,7 +129,7 @@ function App() {
           </div>
           <div className="weather-box">
             <div className="temp">
-            <div className="icon-weather"><img src={icon} width="100" height="100" /></div>
+            <div className="icon-weather"><img src={icon} width="100" height="100" alt='' /></div>
               {Math.round(weather.main.temp)}°c
             </div>
             <div className="weather">{weather.weather[0].main}</div>
